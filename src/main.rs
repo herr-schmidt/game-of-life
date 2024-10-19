@@ -15,7 +15,7 @@ fn main() {
     initialize_table(&mut table);
 
     update_gui(&mut stdout, &mut table);
-    for i in 0..500 {
+    for _ in 0..500 {
         advance_generation(&mut table);
         std::thread::sleep(std::time::Duration::from_millis(25));
         update_gui(&mut stdout, &mut table);
